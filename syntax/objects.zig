@@ -9,7 +9,10 @@ pub fn main() !void {
     var undefinedVar: i32 = undefined;
     undefinedVar = 123; // undefined and have to mutate as per the rule
     const array = [_]i8{ 1, 2, 3, 4, 5 }; // array of size 5 but auto no. by using _
-    _ = array; // autofix
     const arr = [5]i8{ 1, 2, 3, 4, 5 }; // array of size 5 but auto no. by using _
-    try stdout.print("{d}/n", .{arr[4]});
+    const plus = arr ++ array;
+    const slice = array[0..2];
+    try stdout.print("{d}\n", .{plus});
+    try stdout.print("{d}\n", .{arr[4]});
+    try stdout.print("{d}\n", .{slice});
 }
