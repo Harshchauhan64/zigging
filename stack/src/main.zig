@@ -1,7 +1,7 @@
 const std = @import("std");
 const Allocator = std.mem.Allocator;
 
-fn Stack(comptime T: type) type {
+fn Stack(comptime T: type) type { // generic function returning struct  lovely
     return struct {
         items: []T,
         capacity: usize,
