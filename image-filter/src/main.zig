@@ -1,3 +1,6 @@
+//! NOTE: Copied this shit not accepted
+//! PERF: port it to zigimg
+//! TODO: CLI args for img path and -o output path 
 const std = @import("std");
 const math = std.math;
 const stdout = std.io.getStdOut().writer();
