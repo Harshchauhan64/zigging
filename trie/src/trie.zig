@@ -48,16 +48,12 @@ pub const Trie = struct {
             if (current.child[index] == null) {
                 current.child[index] = try TrieNode.init(self.allocator);
             }
-
-            // Move to the child node
             current = current.child[index].?;
         }
 
-        // Mark the end of the word
         current.term = true;
     }
 
-    // Search for a word in the Trie
     pub fn search(self: *Trie, word: []const u8) bool {
         var current = self.root;
 

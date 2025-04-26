@@ -1,6 +1,6 @@
 //! NOTE: Copied this shit not accepted
 //! PERF: port it to zigimg
-//! TODO: CLI args for img path and -o output path 
+//! TODO: CLI args for img path and -o output path
 const std = @import("std");
 const math = std.math;
 const stdout = std.io.getStdOut().writer();
@@ -154,7 +154,7 @@ fn save_png(image_data: *ImageData) !void {
 pub fn main() !void {
     var gpa = std.heap.GeneralPurposeAllocator(.{}){};
     const allocator = gpa.allocator();
-    var image_data = try read_png(allocator, "img/vec.png");
+    var image_data = try read_png(allocator, "img/zero-the-ziguna.png");
     try apply_image_filter(&image_data);
 
     try save_png(&image_data);
